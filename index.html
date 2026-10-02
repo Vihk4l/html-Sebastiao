@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sebastiao Aprecido Bernades Bitequity Transaction History</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #fbfaf8;
+      --text: #1a1a1a;
+      --muted: #5f5f5f;
+      --line: #e7e5e0;
+      --chip-bg: #fff6e5;
+      --chip-border: #f0c978;
+      --chip-text: #b86e00;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      padding: 24px 16px 40px;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 650;
+      margin: 0 0 20px;
+      line-height: 1.25;
+    }
+
+    .filters {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-bottom: none;
+      padding: 10px 16px;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .filters-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filters-label {
+      font-size: 15px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      color: var(--chip-text);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 14px;
+    }
+
+    .chip button,
+    .close-all {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+      font-size: 16px;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .close-all {
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 0 0 8px 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1100px;
+      font-size: 15px;
+    }
+
+    thead th {
+      text-align: left;
+      font-weight: 600;
+      padding: 18px 16px;
+      white-space: nowrap;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    thead th .caret {
+      color: var(--muted);
+      font-size: 11px;
+      margin-left: 6px;
+    }
+
+    tbody td {
+      padding: 22px 16px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--surface);
+    }
+
+    .col-check {
+      width: 48px;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #444;
+    }
+
+    .logo-area {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo-slot {
+      width: 220px;
+      height: 90px;
+      /* border: 2px dashed #c9c6bf; */
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo-slot img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --surface: #1c1c1c;
+        --text: #f0f0f0;
+        --muted: #a0a0a0;
+        --line: #2e2e2e;
+        --chip-bg: #2d2412;
+        --chip-border: #6b5220;
+        --chip-text: #f0b44c;
+      }
+    }
+
+    .green {
+      color: rgb(35, 155, 35);
+      font-weight: bolder;
+    }
+
+    h1 {
+      color: orangered;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <h1>Histórico de Transações da Bitequity de Sebastiao Aprecido Bernades</h1>
+
+    <div class="filters">
+      <div class="filters-left">
+        <span class="filters-label">Filtros ativos</span>
+        <span class="chip">Busca: Sebastião Aprecido Bernades <button aria-label="Remover filtro">×</button></span>
+      </div>
+      <button class="close-all" aria-label="Limpar filtros">×</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-check"><input type="checkbox" aria-label="Selecionar todos"></th>
+            <th>Nome de usuário <span class="caret">⌄</span></th>
+            <th>Ativo <span class="caret">⌄</span></th>
+            <th>Tipo <span class="caret">⌄</span></th>
+            <th>Valor <span class="caret">⌄</span></th>
+            <th>Status <span class="caret">⌄</span></th>
+            <th>Endereço da carteira do destinatário <span class="caret">⌄</span></th>
+            <th>Data da Transação <span class="caret">⌄</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT ETH</td>
+            <td>+</td>
+            <td>3666650.00000000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>22 de maio de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT TRX</td>
+            <td>+</td>
+            <td>250.00000000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>24 de agosto de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT TRX</td>
+            <td>+</td>
+            <td>250.00000000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>28 de agosto de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT ETH</td>
+            <td>-</td>
+            <td>600000.00000000</td>
+            <td style="font-weight: bolder; color: #d28819;">pendente</td>
+            <td style="font-weight: bold;"> <span>NuBank Brasil</span> 70182720-8 </td>
+            <td>28 de agosto de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>BTC</td>
+            <td>+</td>
+            <td>0.00630000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>29 de agosto de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>BTC</td>
+            <td>+</td>
+            <td>0.00320000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>29 de agosto de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT TRX</td>
+            <td>+</td>
+            <td>250.00000000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>4 de setembro de 2026</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>Sebastião Aprecido Bernades</td>
+            <td>USDT TRX</td>
+            <td>+</td>
+            <td>257.00000000</td>
+            <td class="green">concluído</td>
+            <td></td>
+            <td>5 de setembro de 2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LOGO: replace the placeholder text with <img src="your-logo.png" alt="Bitequity logo"> -->
+    <div class="logo-area">
+      <div class="logo-slot" id="logo-slot"> Bitequity.inc @2026 <img src="Bitequity_logo.jpeg"> </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
